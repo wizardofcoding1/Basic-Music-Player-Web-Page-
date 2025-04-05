@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    animation: radialShift 10s ease-in-out infinite;
+    background-size: 200% 200%;
+    border-radius: 20px;
+    padding: 30px;
+    transition: background 1s ease-in-out;
+}
+
+@keyframes radialShift {
+    0% {
+        background: radial-gradient(circle, #ff416c, #ff4b2b);
+    }
+
+    25% {
+        background: radial-gradient(circle, #ff4b2b, #1e90ff);
+    }
+
+    50% {
+        background: radial-gradient(circle, #1e90ff, #32cd32);
+    }
+
+    75% {
+        background: radial-gradient(circle, #32cd32, #ffeb3b);
+    }
+
+    100% {
+        background: radial-gradient(circle, #ff416c, #ff4b2b);
+    }
+}
+
+#body-center {
+    text-align: center;
+    border: 5px solid white;
+    width: fit-content;
+    border-radius: 10rem;
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    justify-content: center;
+    /* Vertically center inside the box */
+    align-items: center;
+    transition: background 5s ease-in-out;
+
+    padding: 15px 30px;
+
+
+    
+}
+
+
+
+#song-title {
+    font-family: "Permanent Marker", cursive;
+    font-weight: bolder;
+
+    text-shadow:
+        -1px -1px 0 red,
+        1px -1px 0 red,
+        -1px 1px 0 red,
+        1px 1px 0 red;
+
+    font-size: clamp(3rem, 5vw, 4rem);
+}
+
+#pause,
+#play,
+#previous-song,
+#next-song,
+#volume-button {
+    background: none;
+    border: none;
+    outline: none;
+
+}
+
+#pause i,
+#play i,
+#previous-song i,
+#next-song i,
+#volume-button i {
+    color: rgb(108, 22, 221);
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    /* border: 1px solid black; */
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
+
+#song-play {
+    width: 100%;
+}
+
+#song-block p {
+    display: inline;
+}
